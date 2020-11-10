@@ -1,9 +1,10 @@
 
+import base.Person; 
+
 import base.Bike;
 import base.Parcel;
 import base.ParcelStatus;
 import java.util.Arrays;
-
 
 
 /*
@@ -24,10 +25,13 @@ public class FastMoveConsoleApplication {
         return bikes;
     }
     
-    public static Parcel[] getParcels(){
-        Parcel[] parcels = new Parcel[0];
-        parcels[0] = new Parcel(2.5, ParcelStatus.SHIPPING);
-        
-        return parcels;
+
+ public static Person[] getPerson() {
+        Person[] person = new Person[3];
+        person[0] = new Person("firstname","lastname");
+        return person;
     }
-}
+    
+     
+ }   
+   
