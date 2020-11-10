@@ -14,5 +14,6 @@ import base.Bike;
 public class FastBike {
     private Bike fastBike;
     private double maxLoad;
-    private double currentLoad;
+    private String driverName;
+    
 }
