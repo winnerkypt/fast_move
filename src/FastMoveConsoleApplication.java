@@ -29,5 +29,7 @@ public class FastMoveConsoleApplication {
         parcels[0] = new Parcel(2.5, ParcelStatus.SHIPPING);
         
         return parcels;
+        
+        //asdasd
     }
 }
