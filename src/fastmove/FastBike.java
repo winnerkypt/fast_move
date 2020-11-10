@@ -1,19 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fastmove;
 
 import base.Bike;
+import base.Parcel;
+import base.Person;
 
-/**
- *
- * @author praisan
- */
 public class FastBike {
-    private Bike fastBike;
+    private Bike bike;
+    private int maxParcels;
     private double maxLoad;
-    private String driverName;
+    private Person driver;
+    private ParcelStack parcelStack; 
+
+    public FastBike(Bike bike, int maxParcels, double maxLoad, Person driver) {
+        this.bike=bike;
+        this.maxLoad = maxLoad;
+        this.driver = driver;
+        parcelStack =new ParcelStack(maxParcels,maxLoad);
+    }
+    public boolean addParcel(Parcel parcel){
+        return parcelStack.addParcel(parcel);
+    }
+    public Parcel getParcel(){
+        return parcelStack.getParcel();
+    }
+
+    public Person getDriver() {
+        return driver;
+    }
+    public ParcelStack getParcelStack() {
+        return parcelStack;
+    }
+
+    @Override
+    public String toString() {
+        return "FastBike: " + "bike=" + bike.toString() + 
+                "\n"+"max parcels=" + maxParcels + ", maxLoad=" + maxLoad + 
+                "\n"+"driver=" + driver + 
+                "\n"+"parcels=" + parcelStack ;
+    }
     
 }

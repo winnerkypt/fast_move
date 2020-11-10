@@ -1,23 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fastmove;
 
 import base.Parcel;
 import base.StreamingStat;
 
-/**
- *
- * @author praisan
- */
 public class ParcelStack {
 
     private Parcel[] parcels;
     private final double maxWeight;
-    private int count;
     private StreamingStat weightStat;
+    private int count;
+    
     
     public ParcelStack(int size, double maxWeight) {
         this.parcels = new Parcel[size];
@@ -57,4 +49,11 @@ public class ParcelStack {
     public double getMin() {
         return weightStat.getMin();
     }
+
+    @Override
+    public String toString() {
+        return "ParcelStack " + "maxWeight=" + maxWeight + ", count=" + count+
+                "\n"+weightStat.toString();
+    }
+    
 }

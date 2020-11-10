@@ -1,6 +1,5 @@
 package base;
 
-
 public class StreamingStat {
     String name;
     private double sum, max, min, lastValue;
@@ -64,6 +63,6 @@ public class StreamingStat {
 
     @Override
     public String toString() {
-        return "StreamingStat{" + "name=" + name + ", mean=" + this.getMean() + ", max=" + max + ", min=" + min + ", lastValue=" + lastValue + ", n=" + n + '}';
+        return "statistic{" + "name=" + name + ", mean=" + this.getMean() + ", max=" + max + ", min=" + min + ", lastValue=" + lastValue + ", n=" + n + '}';
     }
 }
